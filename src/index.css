@@ -25,19 +25,23 @@ body {
     padding-bottom: 70px;
 }
 
-.btn-custom{
+.btn-custom {
     background: var(--second-color);
     border-color: var(--second-color);
     border-radius: 50px;
     transition: 0.3s;
 }
 
-.btn-custom:hover{
+.btn-custom:hover {
     background: rgb(255, 38, 0);
     border-color: rgb(255, 38, 0);
     border-radius: 50px;
-    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
     transition: 0.3s;
 }
 
-
+.btn-custom:focus {
+    background: rgb(255, 38, 0);
+    border-color: rgb(255, 38, 0);
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+}

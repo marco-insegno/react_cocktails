@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import Header from '../components/Header'
 import imgBg from '../assets/img/home-header.jpg'
 import imgDf from '../assets/img/header-image-default.jpg'
-import Button from 'react-bootstrap/Button';
 import Lottie from "lottie-react";
 import cocktail from '../cocktail.json';
 import './styles/home.css'
 
 function Home() {
+
+  const [input,setInput] = useState('Cerca...')
+
   return (
     <>
       <Header img={imgBg} imgDefault={imgDf} disableOverlay>
@@ -22,11 +26,37 @@ function Home() {
             </div>
           </div>
           <div className="col-12 col-md-5">
-            <Lottie animationData={cocktail} className='animation-custom'/>
+            <Lottie animationData={cocktail} className='animation-custom' />
           </div>
         </div>
-
       </Header>
+
+      <section className="container my-5 pt-5 px-4 position-relative z-index-3">
+        <div className="row mt-sm-5 mt-md-0">
+
+          <div className="col-12 col-lg-4 mb-3 col-xl-4 col-xxl-3">
+            <h2>Cerca il tuo drink </h2>
+          </div>
+
+          <div className="col-10 col-md-7 col-lg-4 col-xl-3">
+            <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder={input}
+                className="me-2 rounded-5"
+                aria-label="Search"
+                id="drink"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+              />
+              <Button className='btn-custom'>Search</Button>
+            </Form>
+            <p className='text-muted fst-italic mt-2'>3 risultati</p>
+          </div>
+        </div>
+      </section>
+
+
     </>
   )
 }
