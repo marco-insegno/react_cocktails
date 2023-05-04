@@ -1,50 +1,58 @@
-import { IoSchool, IoPeopleCircleSharp } from "react-icons/io5";
-import { ImDatabase } from "react-icons/im";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faBlender, faChampagneGlasses, faMartiniGlass } from "@fortawesome/free-solid-svg-icons";
 
 export const valueCards = [
   {
-    title: "Educare",
-    icon: <IoSchool className="icon card-icon" />,
+    id:1,
+    title: "Bar",
+    icon: <FontAwesomeIcon icon={faMartiniGlass}/>,
     text:
-      " Pickled hashtag portland pork belly cred selvage viral retro prism lomo narwhal cray selfies vegan lyft.",
+      " Vieni a trovarci nel nostro bar",
   },
   {
-    title: "Insegnare",
-    icon: <IoPeopleCircleSharp className="icon card-icon" />,
+    id:2,
+    title: "Corsi Barman",
+    icon: <FontAwesomeIcon icon={faBlender}/>,
     text:
-      "iPhone banh mi you probably haven't heard of them fanny pack marfa four loko freegan. XOXO salvia twee whatever post-ironic blog",
+      "Frequenta un corso barman riconosciuto ovunque e inizia a lavorare entro 3 mesi",
   },
   {
-    title: "Centralizzare",
-    icon: <ImDatabase className="icon card-icon" />,
+    id:3,
+    title: "Degustazione Aperitivo",
+    icon: <FontAwesomeIcon icon={faChampagneGlasses}/>,
     text:
-      "Tilde post-ironic celiac franzen sustainable, vinyl polaroid direct trade tattooed vaporware kogi health goth cray echo park organic.",
+      "9 cocktail pronti da bere di altissima qualità da provare assolutamente e 4 tumbler in eco-cristallo per bere in compagnia",
   },
 ];
 
 export const teamCards = [
   {
+    id:1,
     title: "Dennis Rodman",
     img:
       "https://sportnews.snai.it/wp-content/uploads/2020/05/GettyImages-625824450.jpg",
     subtitle: "CEO & Founder",
   },
   {
-    title: "Tatyana Doglieva",
+    id:2,
+    title: "Pluto",
     img:
-      "https://i1.wp.com/alabanza.ru/wp-content/uploads/2018/04/Instagram-i-Vikipediya-Tatyany-Dogilevoj-foto.jpg",
+      "https://www.ventennipaperoni.com/wp-content/uploads/2020/03/volto-pippo-e1584113937806.jpg",
     subtitle: "CTO",
   },
   {
+    id:3,
     title: "Charlie Sheen",
     img:
       "https://www.ecodelcinema.com/wp-content/uploads/2013/10/Charlie-Sheen.png",
     subtitle: "Stakeholder & Testimonial",
   },
   {
-    title: "Shia Lebeouf",
+    id:4,
+    title: "Marco Insegno",
     img:
-      "https://www.corriere.it/methode_image/2021/01/15/Moda/Foto%20Moda/8%20shia%20labeouf.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF3Hn-U8DZAAvRqytInoSCHli0uoQWBJNXLlRlMUeSgQ&s",
     subtitle: "Creative Director",
   },
 ];

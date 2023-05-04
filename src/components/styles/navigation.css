@@ -8,6 +8,10 @@
     color: var(--second-color);
     transition: 0.3s;
 }
+
+.nav-link:focus{
+    color: var(--second-color);
+}
 .social-link{
     font-size: 1.3rem;
     margin: 0 20px;
