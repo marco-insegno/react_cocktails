@@ -1,13 +1,42 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --light-color: rgb(255, 238, 238);
+    --dark-color: rgb(44, 44, 44);
+    --first-color: rgb(222, 215, 34);
+    --second-color: #ff2600;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+    height: 100%;
+    position: relative;
 }
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--first-color);
+    color: var(--dark-color);
+}
+
+#root {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 80px;
+}
+
+.btn-custom{
+    background: var(--second-color);
+    border-color: var(--second-color);
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.btn-custom:hover{
+    background: rgb(255, 38, 0);
+    border-color: rgb(255, 38, 0);
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    transition: 0.3s;
+}
+

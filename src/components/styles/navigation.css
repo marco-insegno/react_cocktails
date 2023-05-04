@@ -1,0 +1,26 @@
+.nav-link,
+.nav-link a{
+    color: var(--dark-color);
+    transition: 0.3s;
+    text-decoration: none;
+}
+.nav-link:hover{
+    color: var(--second-color);
+    transition: 0.3s;
+}
+.social-link{
+    font-size: 1.3rem;
+    margin: 0 20px;
+    color: var(--dark-color);
+    transition: 0.3s;
+    
+}
+.social-link:hover{
+    transition: 0.3s;
+    transform: scale(1.2);
+    color: var(--second-color);
+}
+.navbar-toggler{
+    background: var(--second-color);
+    color: var(--first-color);
+}
