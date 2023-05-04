@@ -1,0 +1,12 @@
+@media screen and (max-width: 768px) {
+    .animation-custom {
+
+        margin-bottom: -300px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .animation-custom {
+        display: none;
+    }
+}

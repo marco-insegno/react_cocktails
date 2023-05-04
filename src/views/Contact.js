@@ -2,12 +2,13 @@ import React from 'react'
 import Header from '../components/Header'
 import FormContact from '../components/FormContact'
 import imgBg from '../assets/img/contact-header.jpg'
+import imgDf from '../assets/img/header-image-default.jpg'
 
 
 function Contact() {
   return (
     <>
-      <Header disableOverlay img={imgBg} className='header-contact'>
+      <Header disableOverlay img={imgBg} imgDefault={imgDf} className='header-contact'>
 
         <div className="row justify-content-center">
           <div className="col-10 text-center d-flex flex-column align-items-center" style={{
