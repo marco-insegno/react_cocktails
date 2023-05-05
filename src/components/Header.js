@@ -3,10 +3,6 @@ import './styles/header.css'
 
 function Header({ children, img, imgDefault, disableOverlay }) {
 
-    if(img === '/static/media/contact-header.4791df0ed0805bd1c5b6.jpg'){
-        console.log('about');
-    }
-
     const image = img ? img : imgDefault;
 
     return (

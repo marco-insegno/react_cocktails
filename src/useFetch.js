@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState, useEffect } from 'react';
 const urlSearchByName = "https://www.thecocktaildb.com/api/json/v1/1/search.php?";
 const urlSearchById = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?";
@@ -12,25 +11,25 @@ function useFetch(query, type = false) {
     const [data, setData] = useState([])
     const [count, setCount] = useState(0);
 
-    console.log(data);
-    console.log(isLoading);
-    console.log(isError);
-    console.log(count);
-
 
     useEffect(() => {
+
+        setIsLoading(false)
+        setIsError(false);
+
         fetch(`${url}${query}`)
-            .then(response => response.json())
+            .then((response) =>response.json())
             .then(data => {
-                setIsLoading(false)
-                setIsError(false)
                 setCount(data.drinks.length)
                 setData(data.drinks)
             }
             )
-            .catch(() => {
+            .catch((err) => {
                 setIsError(true);
+                setCount(0)
+                setIsLoading(false)
             })
+
     }, [url, query])
 
     return (

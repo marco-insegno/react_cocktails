@@ -13,7 +13,7 @@ function CardApp({ title, img, subtitle, icon, text }) {
             <div className="col-12 col-md-6 col-lg-4 mb-5">
                 <Card className='text-center card-custom-service py-5 px-3'>
                     <Card.Body className='d-flex flex-column justify-content-center justify-content-md-start align-items-center'>
-                        <Card.Title className='fs-2 text-uppercase'>{title}</Card.Title>
+                        <Card.Title className='fs-2 text-uppercase title-card-service'>{title}</Card.Title>
                         <Card.Text className='my-5 fa-4x' style={{
                             color: 'var(--second-color)',
                         }}>
@@ -30,7 +30,7 @@ function CardApp({ title, img, subtitle, icon, text }) {
 
         // Card Team
         return (
-            <div className="col-12 col-md-4 mb-4">
+            <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                 <Card className='text-center text-uppercase card-custom-team' style={{
                     background: 'var(--second-color)',
                     color: 'var(--light-color)'

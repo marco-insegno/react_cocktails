@@ -4,7 +4,9 @@
 .card-custom-service{
     min-height: 600px;
 }
-
+.title-card-service{
+    min-height: 80px;
+}
 @media screen and (max-width:1200px) {
 
     .card-custom-service{

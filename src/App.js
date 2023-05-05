@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./views/Home";
 import About from "./views/About";
 import Contact from "./views/Contact";
-import Cocktails from "./views/Cocktails";
+import AllCocktails from "./views/AllCocktails";
 import SingleCocktail from "./views/SingleCocktail";
 import ErrorPage from "./views/ErrorPage";
 import { useGlobalContext } from "./context";
@@ -21,7 +21,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
           <Route path="/contact" element={<Contact/>}/>
-          <Route path="/cocktails" element={<Cocktails/>}/>
+          <Route path="/cocktails" element={<AllCocktails/>}/>
           <Route path="/cocktail/:id" element={<SingleCocktail/>}/>
           <Route path="*" element={<ErrorPage/>}/>
         </Routes>

@@ -31,7 +31,7 @@ function About() {
       <section className="container my-5 py-5">
         <div className="row">
           <div className="col-12 text-center text-uppercase">
-            <h1>Il nostri servizi</h1>
+            <h1 className='font-logo'>Il nostri servizi</h1>
           </div>
         </div>
       </section>
@@ -63,7 +63,7 @@ function About() {
       <section className="container my-5 py-5">
         <div className="row">
           <div className="col-12 text-center text-uppercase">
-            <h1>Il nostro Team</h1>
+            <h1 className='font-logo'>Il nostro Team</h1>
           </div>
         </div>
       </section>

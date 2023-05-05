@@ -8,8 +8,6 @@ function FormContact() {
 
     const [state, handleSubmit] = useForm("xrgvjadd");
 
-console.log(state);
-
     if (state.succeeded) {
         return (
             <section className='container mt-5 text-center'>
@@ -29,11 +27,11 @@ console.log(state);
     return (
 
         <>
-            <section className='container mt-5 py-5'>
+            <section className='container mt-2 mt-md-5 py-5'>
                 <div className="row justify-content-center">
                     <div className="col-10 col-lg-6 border p-5 form-custom">
 
-                        <Form className='my-3 mx-0 my-md-5 mx-md-5' onSubmit={handleSubmit}>
+                        <Form className='my-3 mx-0 my-md-3 mx-md-5' onSubmit={handleSubmit}>
 
                             <Form.Group className="mb-4">
                                 <Form.Label htmlFor="nome">Nome</Form.Label>
