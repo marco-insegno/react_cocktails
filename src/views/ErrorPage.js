@@ -3,8 +3,11 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import { useSpring, animated } from 'react-spring'
 import { useState } from 'react';
+import useTitle from '../useTitle';
 
 function ErrorPage() {
+
+  useTitle('404 Error Page');
 
   const [state, toggle] = useState(true)
 

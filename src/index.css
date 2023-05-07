@@ -24,6 +24,9 @@ body {
     position: relative;
     padding-bottom: 70px;
 }
+.bg-red{
+    background-color: var(--second-color) !important;
+}
 
 .font-logo{
     font-family: 'Slackey', cursive;

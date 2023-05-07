@@ -3,9 +3,13 @@ import Header from '../components/Header'
 import FormContact from '../components/FormContact'
 import imgBg from '../assets/img/contact-header.jpg'
 import imgDf from '../assets/img/header-image-default.jpg'
+import useTitle from '../useTitle'
 
 
 function Contact() {
+
+  useTitle('Contact')
+  
   return (
     <>
       <Header disableOverlay img={imgBg} imgDefault={imgDf} className='header-contact'>

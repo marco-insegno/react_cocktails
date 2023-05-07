@@ -12,8 +12,11 @@ import { useGlobalContext } from '../context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Cocktails from '../components/Cocktails';
+import useTitle from '../useTitle';
 
 function Home() {
+
+  useTitle('Home')
 
   const {
     query,

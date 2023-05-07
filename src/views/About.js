@@ -6,8 +6,11 @@ import teamImg from '../assets/img/team-img.jpg'
 import { valueCards, teamCards } from '../utils/info'
 import CardApp from '../components/Card'
 import './styles/about.css'
+import useTitle from '../useTitle'
 
 function About() {
+
+  useTitle('About')
 
   return (
     <>

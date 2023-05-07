@@ -1,17 +1,20 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import Button from 'react-bootstrap/Button';
 import useFetch from '../useFetch'
 import { Link } from 'react-router-dom'
 import Header from '../components/Header'
 import imgBg from '../assets/img/cocktail-header.jpg'
-import imgDf from '../assets/img/header-image-default.jpg'
+import Badge from 'react-bootstrap/Badge';
+import useTitle from '../useTitle'
 
 function SingleCocktail() {
 
   const { id } = useParams()
 
   const { isLoading, isError, data } = useFetch(`i=${id}`, true)
+
+  useTitle(data[0] ? data[0].strDrink : 'Not Found')
+  
 
   if (isLoading) {
     return (
@@ -60,42 +63,88 @@ function SingleCocktail() {
 
     } = data[0];
 
-    return (
+    const strInstructionsList = [
+      {
+        istruzione: strIngredient1,
+        qty: strMeasure1
+      },
+      {
+        istruzione: strIngredient2,
+        qty: strMeasure2
+      },
+      {
+        istruzione: strIngredient3,
+        qty: strMeasure3
+      },
+      {
+        istruzione: strIngredient4,
+        qty: strMeasure4
+      },
+      {
+        istruzione: strIngredient5,
+        qty: strMeasure5
+      },
+    ]
 
+
+
+    return (
 
       <>
 
-        <Header disableOverlay img={imgBg} imgDefault={imgDf} className='header-contact'>
 
-          <div className="row">
-            <div className="col-12 col-md-6">
+        <section className="container-fluid d-flex justify-content-center align-items-center" style={{
+
+          background: `linear-gradient(0deg, rgba(222, 215, 34,0.5) 0%, rgba(0,0,0,0.5) 100%), url(${imgBg})`,
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          height: '90vh',
+        }}>
+
+          <div className="row d-flex justify-content-center mx-md-2">
+            <div className="col-10 col-md-6">
               <img src={image} style={{
                 width: '100%',
-                borderRadius: '40px'
+                borderRadius: '40px',
+                border: '2px dotted white'
               }} />
             </div>
-            <div className="col-12 col-md-6 text-white font-logo">
-              <h1>{name}</h1>
+            <div className="col-12 col-md-6 text-white d-flex flex-column align-items-center align-items-md-start mt-5">
+              <h1 className='font-logo'>{name}</h1>
+              <div className='mt-2 text-center'>
+                <Badge className="bg-red me-2">{category}</Badge>
+                <Badge className="bg-red me-2">{type}</Badge>
+                <Badge className="bg-red me-2">{strGlass}</Badge>
+              </div>
+
+
+              <h4 className='mt-5'>Ingredienti:</h4>
+              <ul>
+                {
+                  strInstructionsList.map((el, index) => {
+
+                    if (el.istruzione) {
+                      return (
+                        <li key={index}>{el.qty} {el.istruzione}</li>
+                      )
+                    }
+                  })
+                }
+              </ul>
+
+              <h4 className='mt-3'>Istruzioni:</h4>
+
+              {
+                strInstructionsIT 
+                ? <h6>{strInstructionsIT}</h6> 
+                : <h6>{strInstructions}</h6>
+              }
+
             </div>
           </div>
 
-
-
-        </Header>
-
-        {/* <section className="container-fluid px-0">
-          <div className="row">
-            <div className="col-6">
-              <img src={image} style={{
-                width: '100%',
-              }} />
-            </div>
-            <div className="col-6"><h1>cock</h1></div>
-          </div>
-        </section> */}
-
-
-
+        </section>
 
       </>
 
